@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #FFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center-content {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.top {
+  background-image: url(/img/top-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 1024px;
+}
+.top__title {
+  padding-top: 217px;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 32px;
+}
+.top__text {
+  width: 481px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  margin-bottom: 44px;
+}
+.top__text-bold {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.btn {
+  width: 234px;
+  height: 48px;
+  border-radius: 30px;
+  background: #9C0332;
+  padding: 13px 74px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.game {
+  position: relative;
+}
+.game-wrapper {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  background: #000915;
+}
+.game__img {
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(<path-to-image>), lightgray 50%/cover no-repeat;
+}
+.game__title {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  z-index: 1;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}/*# sourceMappingURL=style.css.map */
