@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   color: #FFF;
 }
@@ -55,20 +56,28 @@ a {
   font-weight: 400;
   line-height: normal;
 }
+.btn:hover {
+  cursor: url(/img/clarity_cursor-hand-line.svg), pointer;
+}
 
 .game {
   position: relative;
 }
+.game:hover {
+  border: 3px solid #44D2FF;
+  border-radius: 16px;
+  cursor: url(/img/clarity_cursor-hand-line.svg), pointer;
+}
 .game-wrapper {
   display: flex;
   gap: 32px;
-  flex-wrap: wrap;
   padding-top: 128px;
   padding-bottom: 128px;
   background: #000915;
 }
 .game__img {
   border-radius: 16px;
+  width: 378px;
   background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(<path-to-image>), lightgray 50%/cover no-repeat;
 }
 .game__title {
