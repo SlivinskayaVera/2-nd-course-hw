@@ -16,7 +16,7 @@ a {
 }
 
 .top {
-    background-image: url(/img/top-img.jpg);
+    background-image: url(../img/top-img.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,7 +62,7 @@ a {
     line-height: normal;
 
     &:hover {
-        cursor: url(/img/clarity_cursor-hand-line.svg), pointer;
+        cursor: url(../img/clarity_cursor-hand-line.svg), pointer;
     }
 }
 
@@ -71,7 +71,7 @@ a {
     &:hover {
         border: 3px solid #44D2FF;
         border-radius: 16px;
-        cursor: url(/img/clarity_cursor-hand-line.svg), pointer;
+        cursor: url(../img/clarity_cursor-hand-line.svg), pointer;
     }
     position: relative;
     
@@ -85,7 +85,7 @@ a {
 
     &__img {
         border-radius: 16px;
-        width: 378px;
+        height: 100%;
         background: linear-gradient(180deg, rgba(39, 1, 15, 0.00) 0%, #001944 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
     }
 

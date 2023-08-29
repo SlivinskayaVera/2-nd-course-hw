@@ -16,7 +16,7 @@ a {
 }
 
 .top {
-  background-image: url(/img/top-img.jpg);
+  background-image: url(../img/top-img.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,7 +57,7 @@ a {
   line-height: normal;
 }
 .btn:hover {
-  cursor: url(/img/clarity_cursor-hand-line.svg), pointer;
+  cursor: url(../img/clarity_cursor-hand-line.svg), pointer;
 }
 
 .game {
@@ -66,7 +66,7 @@ a {
 .game:hover {
   border: 3px solid #44D2FF;
   border-radius: 16px;
-  cursor: url(/img/clarity_cursor-hand-line.svg), pointer;
+  cursor: url(../img/clarity_cursor-hand-line.svg), pointer;
 }
 .game-wrapper {
   display: flex;
@@ -77,7 +77,7 @@ a {
 }
 .game__img {
   border-radius: 16px;
-  width: 378px;
+  height: 100%;
   background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(<path-to-image>), lightgray 50%/cover no-repeat;
 }
 .game__title {
