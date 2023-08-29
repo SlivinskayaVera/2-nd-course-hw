@@ -73,11 +73,14 @@ a {
         border-radius: 16px;
         cursor: url(../img/clarity_cursor-hand-line.svg), pointer;
     }
+
     position: relative;
-    
+    width: 379px;
+
     &-wrapper {
         display: flex;
-        gap: 32px;
+        gap: 31px;
+        flex-wrap: wrap;
         padding-top: 128px;
         padding-bottom: 128px;
         background: #000915;
@@ -86,6 +89,7 @@ a {
     &__img {
         border-radius: 16px;
         height: 100%;
+        width: 100%;
         background: linear-gradient(180deg, rgba(39, 1, 15, 0.00) 0%, #001944 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
     }
 
@@ -99,5 +103,38 @@ a {
         font-weight: 600;
         line-height: 32px;
     }
+}
+
+.seasons-game {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 584px;
+
+    &-wrapper {
+        display: flex;
+        min-height: 800px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background: #000915;
+    }
+
+    &__title {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__text {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px
+    }
 
 }
+
+@import 'tablet';
+@import 'mobile';
