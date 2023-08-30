@@ -1,0 +1,14 @@
+@media (max-width: 1260px) {
+
+    .center-content {
+        padding-left: calc(50% - 790px/2);
+        padding-right: calc(50% - 790px/2);
+    }
+
+    .seasons-game {
+
+        &-wrapper {
+            justify-content: center;
+        }
+    }
+}
