@@ -41,7 +41,7 @@ console.log(`Цикл завершен, пройдено ${num} итераций
 
 // Задание 6
 
-firstFriday = 3;
+let firstFriday = 3;
 for (i = 0; i <= 31; i++) {
     if (i === firstFriday) {
         console.log(`Сегодня пятница, ${i}-е число. Необходимо подготовить отчет.`);
