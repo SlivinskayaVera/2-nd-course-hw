@@ -1,17 +1,17 @@
 // Задание 1
 
-for (i = 0; i < 2; i++) {
+for (let i = 0; i < 2; i++) {
     console.log('Привет!');
 };
 
 
 // Задание 2
-for (i = 1; i <= 5; i++) {
+for (let i = 1; i <= 5; i++) {
     console.log(i);
 };
 
 // Задание 3
-for (i = 7; i <= 22; i++) {
+for (let i = 7; i <= 22; i++) {
     console.log(i);
 };
 
@@ -22,7 +22,7 @@ let obj = {
     Петя: '400',
 };
 
-for (i in obj) {
+for (let i in obj) {
     alert(`${i} — зарплата ${obj[i]} долларов.`)
 };
 
@@ -42,7 +42,7 @@ console.log(`Цикл завершен, пройдено ${num} итераций
 // Задание 6
 
 let firstFriday = 3;
-for (i = 0; i <= 31; i++) {
+for (let i = 0; i <= 31; i++) {
     if (i === firstFriday) {
         console.log(`Сегодня пятница, ${i}-е число. Необходимо подготовить отчет.`);
     } else if (i % 7 === firstFriday) {
