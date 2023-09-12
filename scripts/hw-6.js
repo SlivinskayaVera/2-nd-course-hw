@@ -5,7 +5,7 @@ const arr = [1, 5, 4, 10, 0, 3];
 for (el of arr) {
     if (el != 10) {
         console.log(el);
-    } else if ( el === 10) {
+    } else if (el === 10) {
         console.log(el);
         break
     }
@@ -69,8 +69,15 @@ console.log(string);
 // Задание 9
 
 let arr = [[1, 2, 3,], [4, 5, 6]];
-const result = [...arr[0], ...arr[1]];
+// const result = [...arr[0], ...arr[1]];
+const result = arr[0].concat(arr[1]);
 console.log(result);
+
+
+
+function getRandomInt(minValue, maxValue) {
+    return Math.round(Math.random() * (maxValue - minValue)) + minValue;
+}
 
 
 // Задание 10
@@ -107,7 +114,7 @@ const getLengthWords = (arr) => {
 }
 
 console.log(getLengthWords(arrOfStrings));
- // [5, 0, 4, 19, 5]
+// [5, 0, 4, 19, 5]
 
 // Задание 13
 
