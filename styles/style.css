@@ -121,12 +121,40 @@ a {
   line-height: 32px;
 }
 
+.remember-words {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 584px;
+}
+.remember-words-wrapper {
+  display: flex;
+  min-height: 800px;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+  background: #000915;
+}
+.remember-words__title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.remember-words__text {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+
 @media (max-width: 1260px) {
   .center-content {
     padding-left: calc(50% - 395px);
     padding-right: calc(50% - 395px);
   }
-  .seasons-game-wrapper {
+  .seasons-game-wrapper,
+  .remember-words-wrapper {
     justify-content: center;
   }
 }
@@ -175,6 +203,24 @@ a {
     line-height: 22px;
   }
   .seasons-game__img {
+    width: 343px;
+  }
+  .remember-words {
+    width: 343px;
+    text-align: center;
+    align-items: center;
+  }
+  .remember-words-wrapper {
+    min-height: 653px;
+  }
+  .remember-words__title {
+    font-size: 32px;
+  }
+  .remember-words__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .remember-words__img {
     width: 343px;
   }
 }/*# sourceMappingURL=style.css.map */

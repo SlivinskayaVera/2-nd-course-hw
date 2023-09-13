@@ -56,4 +56,27 @@
             width: 343px;
         }
     }
+
+    .remember-words {
+        width: 343px;
+        text-align: center;
+        align-items: center;
+
+        &-wrapper {
+            min-height: 653px;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 22px
+        }
+
+        &__img {
+            width: 343px;
+        }
+    }
 }
