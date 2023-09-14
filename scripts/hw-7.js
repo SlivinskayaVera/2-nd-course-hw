@@ -7,7 +7,7 @@
 
 // const searchStart = (arr, str) => {
 //     str = str.toLowerCase();
-//     let newArr = [];
+//     let newArr = arr.filter(el => el.startWith(str));
 
 //     for (el of arr) {
 
@@ -18,12 +18,25 @@
 //         } else continue
 //     }
 
-//     return console.log(newArr);
+//     return newArr;
 // }
 
 // searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко');
 // searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру');
 // searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино');
+
+
+// Второй вариант
+
+// const searchStart = (arr, str) => {
+//     str = str.toLowerCase();
+//     let newArr = arr.filter(el => el.toLowerCase().startsWith(str));
+//     return newArr;
+// }
+
+// console.log(searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'));
+// console.log(searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'));
+// console.log(searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино'));
 
 
 // Задание 3
@@ -75,31 +88,49 @@
 // Задание 7
 
 // const numbersRandom = (numFirst, numSecond) => {
-//     return console.log(Math.round(Math.random() * (numSecond - numFirst) + numFirst));
+//     return Math.floor(Math.random() * (numSecond - numFirst + 1) + numFirst);
 // };
 
 // const getNumbers = () => {
-//     let minNumberOfUser = prompt('Введите начало диапазона');
-//     minNumberOfUser = Number(minNumberOfUser);
-//     let maxNumberOfUser = prompt('Введите конец диапазона');
-//     maxNumberOfUser = Number(maxNumberOfUser);
+//     let minNumberOfUser = +prompt('Введите начало диапазона');
+//     let maxNumberOfUser = +prompt('Введите конец диапазона');
 
 //     if (isNaN(minNumberOfUser) || isNaN(maxNumberOfUser)) {
 //         console.log('Что-то пошло не так, возможно вы ввели не число');
-//     } else numbersRandom(minNumberOfUser, maxNumberOfUser);
+//     } else return numbersRandom(minNumberOfUser, maxNumberOfUser);
 // }
 
-// getNumbers();
+// console.log(getNumbers());
+
+// const numbersRandom = (numFirst, numSecond) => {
+//     return Math.floor(Math.random() * (numSecond - numFirst + 1) + numFirst);
+// };
+
+// const getNumbers = () => {
+//     let regExp = /^[\d]+$/;
+//     let minNumberOfUser = prompt('Введите начало диапазона');
+//     let maxNumberOfUser = prompt('Введите конец диапазона');
+    
+//     if (regExp.test(minNumberOfUser) && regExp.test(maxNumberOfUser)) {
+//         return numbersRandom(minNumberOfUser, maxNumberOfUser);
+//     } else console.log('Что-то пошло не так, возможно вы ввели не число');
+// }
+
+// console.log(getNumbers());
+
+
 
 
 
 // Задание 8
 
-// let myDate = new Date;
+// let myDate = new Date();
 // console.log(myDate);
 
 
 // Задание 9
+
+// Мой первый (стремный) вариант, который не понравился, потому что я не читаю подсказки  
 
 // let currentDate = new Date();
 // let days73 = 73 * 24 * 60 * 60 * 1000;
@@ -108,18 +139,41 @@
 // const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 // console.log(daysAgo73.toLocaleDateString('ru-RU', options));
 
+// Второй вариант:
+
+// let currentDate = new Date();
+// currentDate.setDate(currentDate.getDate() + 73);
+// const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+// console.log(currentDate.toLocaleDateString('ru-RU', options));
+
 
 // Задание 10
 
 
-// const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+// const months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
 // const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
 
 // const getUsersDate = (date) => {
-//     return console.log(`Дата: ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()} - это ${days[date.getDay()]}. Время: ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}.`);
+//     let hour = date.getHours(); 
+//     let minute = date.getMinutes(); 
+//     let second = date.getSeconds(); 
+
+//     if (hour < 10) { 
+//         hour = "0" + hour; 
+//     };
+
+//     if (minute < 10) { 
+//         minute = "0" + minute;
+//     };
+
+//     if (second < 10) { 
+//         second = "0" + second;
+//     };
+
+//     return console.log(`Дата: ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()} - это ${days[date.getDay()]}. Время: ${hour}:${minute}:${second}.`);
 // }
 
-// let dateUser = new Date;
+// let dateUser = new Date();
 // getUsersDate(dateUser);
 
 
@@ -139,12 +193,10 @@ const gameWords = () => {
     let firstElement = prompt('Чему равнялся первый элемент массива?');
     let lastElement = prompt('Чему равнялся последний элемент массива?');
 
-    if (firstElement === arrSorted[0] && lastElement === arrSorted[6]) {
-        alert('Молодец, ты укадал сразу два слова');
-    } else if (firstElement !== arrSorted[0] && lastElement === arrSorted[6]) {
-        alert('Вы были близки к победе!')
-    } else if (firstElement === arrSorted[0] && lastElement !== arrSorted[6]) {
-        alert('Вы были близки к победе!')
+    if (firstElement.toLowerCase() === arrSorted[0].toLowerCase() && lastElement.toLowerCase() === arrSorted[6].toLowerCase()) {
+        alert('Молодец, ты угадал сразу два слова');
+    } else if (firstElement.toLowerCase() === arrSorted[0].toLowerCase() || lastElement.toLowerCase() === arrSorted[6].toLowerCase()) {
+        alert('Вы были близки к победе!');
     } else {
         alert('Ничего не угадали');
     }
