@@ -190,8 +190,8 @@ const gameWords = () => {
     alert(arrSorted);
     console.log(arrSorted);
 
-    let firstElement = prompt('Чему равнялся первый элемент массива?');
-    let lastElement = prompt('Чему равнялся последний элемент массива?');
+    let firstElement = prompt('Помнишь первое слово?');
+    let lastElement = prompt('Помнишь последнее слово?');
 
     if (firstElement.toLowerCase() === arrSorted[0].toLowerCase() && lastElement.toLowerCase() === arrSorted[6].toLowerCase()) {
         alert('Молодец, ты угадал сразу два слова');
