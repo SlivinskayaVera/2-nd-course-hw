@@ -20,13 +20,13 @@ console.log(people.sort(function (a, b) {
 
 function isPositive(num) {
     if (num >= 0) {
-        return num;
+        return true;
     }
 }
 
 function isMale(obj) {
     if (obj.gender === 'male') {
-        return obj;
+        return true;
     }
 }
 
@@ -104,6 +104,9 @@ function sayHi (name) {
 // Нужно изменить код ниже:
 delayForSecond(sayHi.bind(null, 'Глеб'))
 delayForSecond((cb) => { return sayHi('Глеб') })
+// Лиза подсказала
+delayForSecond(() => sayHi('Глеб') )
+
 
 
 // Правильный порядок:
