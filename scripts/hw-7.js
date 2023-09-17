@@ -49,7 +49,7 @@
 //     return console.log(`Вот наименьшее целое ${numFloor}, вот наибольшее целое ${numCeil}, и ближайшее целове число ${numRound}`);
 // }
 
-// getNumber();
+// setTimeout(getNumber, 1000 * 3);
 // //32.58884
 
 // Задание 4
