@@ -29,8 +29,7 @@
 // Второй вариант
 
 // const searchStart = (arr, str) => {
-//     str = str.toLowerCase();
-//     let newArr = arr.filter(el => el.toLowerCase().startsWith(str));
+//     let newArr = arr.filter(el => el.toLowerCase().startsWith(str.toLowerCase()));
 //     return newArr;
 // }
 
@@ -110,7 +109,7 @@
 //     let regExp = /^[\d]+$/;
 //     let minNumberOfUser = prompt('Введите начало диапазона');
 //     let maxNumberOfUser = prompt('Введите конец диапазона');
-    
+
 //     if (regExp.test(minNumberOfUser) && regExp.test(maxNumberOfUser)) {
 //         return numbersRandom(minNumberOfUser, maxNumberOfUser);
 //     } else console.log('Что-то пошло не так, возможно вы ввели не число');
